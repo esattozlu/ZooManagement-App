@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Upn-5I-Lk4">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Zoo Creation-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CreateZooViewController" customModule="ZooManagementApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huM-t6-DVq">
+                                <rect key="frame" x="96.666666666666686" y="140" width="200" height="196.33333333333331"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Sdn-5d-5xp"/>
+                                    <constraint firstAttribute="width" constant="200" id="ndB-nS-Xt3"/>
+                                </constraints>
+                                <imageReference key="image" image="photo.stack" catalog="system" symbolScale="small"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zoo Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rdh-pO-k6W">
+                                <rect key="frame" x="45" y="368" width="303" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fzD-Ms-Nol"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Budget" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-AI-21O">
+                                <rect key="frame" x="45" y="423" width="303" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="dvt-qO-aqy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Water Limit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2QV-Wf-X1b">
+                                <rect key="frame" x="45" y="478" width="303" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="pp2-i5-ZmH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xU4-O0-8vP">
+                                <rect key="frame" x="115" y="558" width="163" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Jp3-tB-CAr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create" cornerStyle="large">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pDZ-LA-cXr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xU4-O0-8vP" firstAttribute="top" secondItem="2QV-Wf-X1b" secondAttribute="bottom" constant="45" id="1x9-rB-4PC"/>
+                            <constraint firstItem="rdh-pO-k6W" firstAttribute="top" secondItem="huM-t6-DVq" secondAttribute="bottom" constant="30" id="3Lp-YF-AFp"/>
+                            <constraint firstItem="huM-t6-DVq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4PA-KY-BR4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pFj-AI-21O" secondAttribute="trailing" constant="45" id="4Wm-bk-qCA"/>
+                            <constraint firstItem="xU4-O0-8vP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="62p-QF-hVj"/>
+                            <constraint firstItem="pFj-AI-21O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="9VT-w4-7Pk"/>
+                            <constraint firstItem="2QV-Wf-X1b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="KfZ-69-GF0"/>
+                            <constraint firstItem="rdh-pO-k6W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nvg-uZ-dCv"/>
+                            <constraint firstItem="xU4-O0-8vP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eyj-YI-A6W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2QV-Wf-X1b" secondAttribute="trailing" constant="45" id="gOg-mZ-YNK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xU4-O0-8vP" secondAttribute="trailing" constant="115" id="hWw-1u-DBc"/>
+                            <constraint firstItem="huM-t6-DVq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="ksa-to-u4I"/>
+                            <constraint firstItem="pFj-AI-21O" firstAttribute="top" secondItem="rdh-pO-k6W" secondAttribute="bottom" constant="20" id="mVA-Pj-Iiw"/>
+                            <constraint firstItem="pFj-AI-21O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mu6-S5-utl"/>
+                            <constraint firstItem="2QV-Wf-X1b" firstAttribute="top" secondItem="pFj-AI-21O" secondAttribute="bottom" constant="20" id="nel-BD-uvO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rdh-pO-k6W" secondAttribute="trailing" constant="45" id="rob-rk-tw6"/>
+                            <constraint firstItem="rdh-pO-k6W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="t7C-T9-8KW"/>
+                            <constraint firstItem="2QV-Wf-X1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uF0-LE-bWD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zoo Creation" id="6Bl-cx-Nmq"/>
+                    <connections>
+                        <outlet property="budgetTextField" destination="pFj-AI-21O" id="OVe-Rd-gLb"/>
+                        <outlet property="waterLimitTextField" destination="2QV-Wf-X1b" id="hoQ-x2-HfB"/>
+                        <outlet property="zooLogoImageView" destination="huM-t6-DVq" id="8QI-oV-2pX"/>
+                        <outlet property="zooNameTextField" destination="rdh-pO-k6W" id="HGJ-56-H0l"/>
+                        <segue destination="9LR-WI-k4Y" kind="show" identifier="toZooDetailPage" id="uCJ-bp-Ln1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.885496183206" y="-2.1126760563380285"/>
+        </scene>
+        <!--Zoo Details-->
+        <scene sceneID="oZT-DT-zy1">
+            <objects>
+                <viewController id="9LR-WI-k4Y" customClass="ZooDetailsViewController" customModule="ZooManagementApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0Z-g5-CKi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-fL-N8z">
+                                <rect key="frame" x="121.66666666666669" y="103" width="150" height="150"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="yWG-1x-cbB"/>
+                                    <constraint firstAttribute="width" constant="150" id="zom-ML-z6u"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zoo Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hga-u7-eo2">
+                                <rect key="frame" x="16" y="253" width="361" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="mxV-Er-bem">
+                                <rect key="frame" x="50" y="294" width="170" height="176"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-I9-Bm9">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water limit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afr-SY-BLH">
+                                        <rect key="frame" x="0.0" y="38" width="104" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Limit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-i2-kcd">
+                                        <rect key="frame" x="0.0" y="76" width="152" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WX9-62-l6s">
+                                        <rect key="frame" x="0.0" y="114" width="155.66666666666666" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total salaries:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWN-Za-pbG">
+                                        <rect key="frame" x="0.0" y="152" width="125.66666666666667" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="64M-J3-MsZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="k4i-RO-cAR">
+                                <rect key="frame" x="225" y="294" width="148" height="176"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDe-9I-RSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-lz-dBh">
+                                        <rect key="frame" x="0.0" y="38" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSz-eJ-Lwa">
+                                        <rect key="frame" x="0.0" y="76" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hh-6A-lD5">
+                                        <rect key="frame" x="0.0" y="114" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25000₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6q-kN-hU2">
+                                        <rect key="frame" x="0.0" y="152" width="148" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an amout" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-ub-3eI">
+                                <rect key="frame" x="80" y="478" width="233" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="uk7-2U-b7O">
+                                <rect key="frame" x="30" y="527" width="333" height="233"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l4n-2c-AvE">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-1C-cBU">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Add Income" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addIncomeButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="rKI-VI-1f2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDH-6F-GVh">
+                                                <rect key="frame" x="176.66666666666663" y="0.0" width="156.33333333333337" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Add Expense" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addExpenseButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="eII-RA-aky"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eQP-9i-aej">
+                                        <rect key="frame" x="0.0" y="61" width="333" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcn-ke-UVI">
+                                                <rect key="frame" x="0.0" y="0.0" width="156.66666666666666" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Change Water Limit" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changeWaterLimitButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="Tzu-1c-Uzd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4Q-jh-0CE">
+                                                <rect key="frame" x="176.66666666666663" y="0.0" width="156.33333333333337" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Increase Water Limit" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="increaseWaterLimitButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="Jt1-uR-D4q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="X4q-nv-8Mv">
+                                        <rect key="frame" x="0.0" y="122" width="333" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UNK-78-N2q">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.66666666666666" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="New Keeper" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="newKeeperButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="pQF-FN-ZXM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBp-PT-gNW">
+                                                <rect key="frame" x="177.66666666666663" y="0.0" width="155.33333333333337" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="New Animal" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="newAnimalButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="Oy4-dV-NBq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="toX-Xd-blL">
+                                        <rect key="frame" x="0.0" y="183" width="333" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-RL-vkp">
+                                                <rect key="frame" x="0.0" y="0.0" width="155.66666666666666" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Pay Salaries" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="paySalariesButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="wep-rd-KXw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1v-Uh-n7C">
+                                                <rect key="frame" x="177.66666666666663" y="0.0" width="155.33333333333337" height="50"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Show Animal &amp; Keeper List" cornerStyle="large">
+                                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="showListButtonClicked:" destination="9LR-WI-k4Y" eventType="touchUpInside" id="ZS0-82-aQ0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1um-ew-rte"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fyh-fL-N8z" firstAttribute="centerX" secondItem="o0Z-g5-CKi" secondAttribute="centerX" id="4h0-DQ-rLR"/>
+                            <constraint firstItem="mxV-Er-bem" firstAttribute="leading" secondItem="1um-ew-rte" secondAttribute="leading" constant="50" id="B87-f7-dzU"/>
+                            <constraint firstItem="hga-u7-eo2" firstAttribute="leading" secondItem="1um-ew-rte" secondAttribute="leading" constant="16" id="Bnm-22-IZQ"/>
+                            <constraint firstItem="mxV-Er-bem" firstAttribute="top" secondItem="hga-u7-eo2" secondAttribute="bottom" constant="5" id="Ew4-v3-8JV"/>
+                            <constraint firstItem="hga-u7-eo2" firstAttribute="top" secondItem="fyh-fL-N8z" secondAttribute="bottom" id="Rh2-bt-hd3"/>
+                            <constraint firstItem="uk7-2U-b7O" firstAttribute="top" secondItem="0Px-ub-3eI" secondAttribute="bottom" constant="15" id="Rpk-OH-O4F"/>
+                            <constraint firstItem="k4i-RO-cAR" firstAttribute="leading" secondItem="mxV-Er-bem" secondAttribute="trailing" constant="5" id="VP7-S1-llZ"/>
+                            <constraint firstItem="1um-ew-rte" firstAttribute="trailing" secondItem="hga-u7-eo2" secondAttribute="trailing" constant="16" id="d6t-Tr-p1y"/>
+                            <constraint firstItem="uk7-2U-b7O" firstAttribute="leading" secondItem="o0Z-g5-CKi" secondAttribute="leading" constant="30" id="eYa-7p-Ito"/>
+                            <constraint firstItem="fyh-fL-N8z" firstAttribute="top" secondItem="1um-ew-rte" secondAttribute="top" id="gZ7-H8-dRD"/>
+                            <constraint firstItem="0Px-ub-3eI" firstAttribute="top" secondItem="mxV-Er-bem" secondAttribute="bottom" constant="8" id="hKv-Y3-01S"/>
+                            <constraint firstItem="1um-ew-rte" firstAttribute="trailing" secondItem="0Px-ub-3eI" secondAttribute="trailing" constant="80" id="mue-HB-Ovm"/>
+                            <constraint firstItem="k4i-RO-cAR" firstAttribute="top" secondItem="hga-u7-eo2" secondAttribute="bottom" constant="5" id="sVz-H7-PsM"/>
+                            <constraint firstAttribute="trailing" secondItem="uk7-2U-b7O" secondAttribute="trailing" constant="30" id="tro-bA-1rd"/>
+                            <constraint firstItem="1um-ew-rte" firstAttribute="trailing" secondItem="k4i-RO-cAR" secondAttribute="trailing" constant="20" id="vj5-1Y-KAQ"/>
+                            <constraint firstItem="0Px-ub-3eI" firstAttribute="leading" secondItem="1um-ew-rte" secondAttribute="leading" constant="80" id="zlp-lf-PXW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Zoo Details" id="f8y-e0-q2U"/>
+                    <connections>
+                        <outlet property="amountTextField" destination="0Px-ub-3eI" id="bT6-kx-6zM"/>
+                        <outlet property="budgetLabel" destination="hDe-9I-RSR" id="Hp2-vH-NXe"/>
+                        <outlet property="employeeCountLabel" destination="8Hh-6A-lD5" id="V4f-O5-o36"/>
+                        <outlet property="logoImageView" destination="fyh-fL-N8z" id="vRF-au-x6t"/>
+                        <outlet property="remaininLimitTextField" destination="hSz-eJ-Lwa" id="Sfu-0M-p97"/>
+                        <outlet property="totalSalariesLabel" destination="Y6q-kN-hU2" id="8r7-G9-mMJ"/>
+                        <outlet property="waterLimitLabel" destination="LHU-lz-dBh" id="Qra-WI-oPz"/>
+                        <outlet property="zooNameLabel" destination="hga-u7-eo2" id="xXT-GV-gWn"/>
+                        <segue destination="hYr-LA-i8q" kind="show" identifier="toAddKeeper" id="MBL-Xa-siB"/>
+                        <segue destination="uBO-SR-Q5T" kind="show" identifier="toAddAnimal" id="4iQ-Jr-eZM"/>
+                        <segue destination="4i2-7H-1O2" kind="show" identifier="toList" id="n0M-Aw-tvo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekH-Jw-dix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2041.9847328244275" y="-2.1126760563380285"/>
+        </scene>
+        <!--New Keeper-->
+        <scene sceneID="exb-gj-72A">
+            <objects>
+                <viewController id="hYr-LA-i8q" customClass="AddNewKeeperViewController" customModule="ZooManagementApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hvk-yc-Fpx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0Pz-dw-UNt">
+                                <rect key="frame" x="30" y="163" width="333" height="196"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keeper Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="srN-Ls-oNX">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keeper Id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfs-Mx-2K4">
+                                        <rect key="frame" x="0.0" y="54" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keeper Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-dA-9Um">
+                                        <rect key="frame" x="0.0" y="108" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8zs-2w-ESR">
+                                        <rect key="frame" x="0.0" y="162" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9A-Yy-SKT">
+                                <rect key="frame" x="90" y="409" width="213" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Z4V-qp-YZB"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Keeper" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createKeeperButtonClicked:" destination="hYr-LA-i8q" eventType="touchUpInside" id="AiH-KN-Lso"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bw1-Os-U3S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V9A-Yy-SKT" firstAttribute="top" secondItem="0Pz-dw-UNt" secondAttribute="bottom" constant="50" id="9wr-rF-aOo"/>
+                            <constraint firstItem="0Pz-dw-UNt" firstAttribute="top" secondItem="bw1-Os-U3S" secondAttribute="top" constant="60" id="FHc-xW-eI2"/>
+                            <constraint firstItem="V9A-Yy-SKT" firstAttribute="leading" secondItem="bw1-Os-U3S" secondAttribute="leading" constant="90" id="Y3h-24-2wO"/>
+                            <constraint firstItem="bw1-Os-U3S" firstAttribute="trailing" secondItem="V9A-Yy-SKT" secondAttribute="trailing" constant="90" id="Yjw-bD-bAP"/>
+                            <constraint firstItem="0Pz-dw-UNt" firstAttribute="leading" secondItem="bw1-Os-U3S" secondAttribute="leading" constant="30" id="ocb-hW-kUY"/>
+                            <constraint firstItem="bw1-Os-U3S" firstAttribute="trailing" secondItem="0Pz-dw-UNt" secondAttribute="trailing" constant="30" id="th0-gw-pi6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Keeper" id="24G-Xd-ddR"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="WXv-dA-9Um" id="U5b-Kk-sTR"/>
+                        <outlet property="idTextField" destination="Lfs-Mx-2K4" id="sBy-Qo-u5D"/>
+                        <outlet property="nameTextField" destination="srN-Ls-oNX" id="8jl-nG-gdQ"/>
+                        <outlet property="salaryTextField" destination="8zs-2w-ESR" id="nTo-mr-gRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xx5-hJ-xgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085" y="-685"/>
+        </scene>
+        <!--New Animal-->
+        <scene sceneID="Kw6-Jt-CbH">
+            <objects>
+                <viewController id="uBO-SR-Q5T" customClass="AddNewAnimalViewController" customModule="ZooManagementApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7M-Oq-ks8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-1p-W4n">
+                                <rect key="frame" x="70" y="409" width="253" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="7eb-iO-qLz"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create Animal" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createAnimalButtonClicked:" destination="uBO-SR-Q5T" eventType="touchUpInside" id="T2U-pm-eis"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iwS-Pd-heu">
+                                <rect key="frame" x="30" y="163" width="333" height="196"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Animal Breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-S3-z1e">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Water Consumption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-oG-KYu">
+                                        <rect key="frame" x="0.0" y="54" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keeper" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERt-l0-cri">
+                                        <rect key="frame" x="0.0" y="108" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Count" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPO-Du-NnW">
+                                        <rect key="frame" x="0.0" y="162" width="333" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Cc-72-zIb">
+                                <rect key="frame" x="70" y="474" width="253" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="wPW-AE-XZD"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Increase Animal Count" cornerStyle="large">
+                                    <backgroundConfiguration key="background" strokeWidth="3">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseAnimalCountButtonClicked:" destination="uBO-SR-Q5T" eventType="touchUpInside" id="UOR-kr-ECK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3SD-jt-C74"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fj2-1p-W4n" firstAttribute="leading" secondItem="3SD-jt-C74" secondAttribute="leading" constant="70" id="EtY-m0-oZd"/>
+                            <constraint firstItem="3SD-jt-C74" firstAttribute="trailing" secondItem="iwS-Pd-heu" secondAttribute="trailing" constant="30" id="WqL-ul-Y8V"/>
+                            <constraint firstItem="3SD-jt-C74" firstAttribute="trailing" secondItem="fj2-1p-W4n" secondAttribute="trailing" constant="70" id="ebJ-vL-A1Y"/>
+                            <constraint firstItem="8Cc-72-zIb" firstAttribute="leading" secondItem="3SD-jt-C74" secondAttribute="leading" constant="70" id="fW4-xl-LZc"/>
+                            <constraint firstItem="3SD-jt-C74" firstAttribute="trailing" secondItem="8Cc-72-zIb" secondAttribute="trailing" constant="70" id="fkN-jm-KYP"/>
+                            <constraint firstItem="iwS-Pd-heu" firstAttribute="top" secondItem="3SD-jt-C74" secondAttribute="top" constant="60" id="gPO-2V-H9r"/>
+                            <constraint firstItem="8Cc-72-zIb" firstAttribute="top" secondItem="fj2-1p-W4n" secondAttribute="bottom" constant="20" id="pu2-fM-2I0"/>
+                            <constraint firstItem="iwS-Pd-heu" firstAttribute="leading" secondItem="3SD-jt-C74" secondAttribute="leading" constant="30" id="rzo-L4-jTN"/>
+                            <constraint firstItem="fj2-1p-W4n" firstAttribute="top" secondItem="iwS-Pd-heu" secondAttribute="bottom" constant="50" id="wO9-v3-EZG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Animal" id="tZa-22-zNe"/>
+                    <connections>
+                        <outlet property="animalBreedTextField" destination="2pn-S3-z1e" id="waj-hF-SMf"/>
+                        <outlet property="countTextField" destination="aPO-Du-NnW" id="kBt-v0-2ub"/>
+                        <outlet property="createAnimalButton" destination="fj2-1p-W4n" id="Qlq-LK-gHg"/>
+                        <outlet property="increaseCountButton" destination="8Cc-72-zIb" id="Me5-4W-EY5"/>
+                        <outlet property="keeperTextField" destination="ERt-l0-cri" id="LUb-tf-Bn9"/>
+                        <outlet property="waterConsumptionTextField" destination="VdJ-oG-KYu" id="jry-ws-10x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJF-XB-0VE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3085" y="-2"/>
+        </scene>
+        <!--Animal & Keeper List-->
+        <scene sceneID="4dp-cZ-oUp">
+            <objects>
+                <viewController id="4i2-7H-1O2" customClass="ListViewController" customModule="ZooManagementApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDr-bY-YmA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SD3-AC-Hfh">
+                                <rect key="frame" x="0.0" y="103" width="393" height="32"/>
+                                <segments>
+                                    <segment title="Keepers"/>
+                                    <segment title="Animals"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kFe-BO-dGh">
+                                <rect key="frame" x="0.0" y="134" width="393" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wSq-cD-UYx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SD3-AC-Hfh" firstAttribute="top" secondItem="wSq-cD-UYx" secondAttribute="top" id="4Hg-Jv-REv"/>
+                            <constraint firstItem="SD3-AC-Hfh" firstAttribute="leading" secondItem="wSq-cD-UYx" secondAttribute="leading" id="E2B-K3-JkG"/>
+                            <constraint firstItem="wSq-cD-UYx" firstAttribute="bottom" secondItem="kFe-BO-dGh" secondAttribute="bottom" id="OlP-hI-nT1"/>
+                            <constraint firstItem="wSq-cD-UYx" firstAttribute="trailing" secondItem="kFe-BO-dGh" secondAttribute="trailing" id="XnE-fN-ntE"/>
+                            <constraint firstItem="kFe-BO-dGh" firstAttribute="leading" secondItem="wSq-cD-UYx" secondAttribute="leading" id="ctW-Ej-mfs"/>
+                            <constraint firstItem="SD3-AC-Hfh" firstAttribute="trailing" secondItem="wSq-cD-UYx" secondAttribute="trailing" id="l0a-6y-dfG"/>
+                            <constraint firstItem="kFe-BO-dGh" firstAttribute="top" secondItem="SD3-AC-Hfh" secondAttribute="bottom" id="ocN-wW-gLO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animal &amp; Keeper List" id="Huh-hU-jIG"/>
+                    <connections>
+                        <outlet property="listSegmentedControl" destination="SD3-AC-Hfh" id="tJl-Sj-8mh"/>
+                        <outlet property="listTableView" destination="kFe-BO-dGh" id="Gtj-1z-mkm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hB-TA-39w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3084.7328244274809" y="678.87323943661977"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="acK-3a-gFR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Upn-5I-Lk4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GvH-U1-x7O">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tiN-w4-pNW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zE-21-MLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.stack" catalog="system" width="128" height="122"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
